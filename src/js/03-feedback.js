@@ -9,7 +9,7 @@ formEl.addEventListener('input', throttle(inputFunction, 500));
 
 function inputFunction(e){
   formValue[e.target.name] = e.target.value;
-  console.log(e.target.value)
+  // console.log(e.target.value)
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formValue))
 }
 if (localStorage.hasOwnProperty(LOCALSTORAGE_KEY)){
@@ -23,7 +23,7 @@ function onFormSubmit(e) {
   e.preventDefault();
   formEl.reset();
   localStorage.removeItem(LOCALSTORAGE_KEY);
-  console.log(formValue)
+  // console.log(formValue)
 }
 
 
