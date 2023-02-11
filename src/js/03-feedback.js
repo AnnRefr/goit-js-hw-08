@@ -23,7 +23,7 @@ function onFormSubmit(e) {
   e.preventDefault();
   formEl.reset();
   localStorage.removeItem(LOCALSTORAGE_KEY);
-  // console.log(formValue)
+  console.log(formValue)
 }
 
 
@@ -33,21 +33,3 @@ function onFormSubmit(e) {
 
 
 
-
-// function onFormSubmit(e) {
-//   e.preventDefault();
-//   const formData = new FormData(formEl);
-//   formData.forEach((value, name) => console.log(value, name));
-//   e.currentTarget.reset();
-//   localStorage.removeItem(LOCALSTORAGE_KEY);
-// }
-
-// function onFormInput(e) {
-//   localStorage.getItem(LOCALSTORAGE_KEY);
-
-// }
-
-// function initForm() {
-//   localStorage.setItem(LOCALSTORAGE_KEY);
-//   }
-// initForm();

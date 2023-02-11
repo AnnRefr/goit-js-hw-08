@@ -18,3 +18,4 @@ if (currentTime) {
     player.setCurrentTime(currentTime)
     }
 }
+timerOfVideo()
