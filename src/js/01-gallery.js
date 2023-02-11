@@ -11,7 +11,6 @@ sellectGallery.insertAdjacentHTML("beforeend", createImgCard(galleryItems));
 function createImgCard() {
   return galleryItems
     .map(({ preview, original, description }) => {
-      sellectGallery.addEventListener("click", galleryCardClick);
       return `
                 <a class="gallery__item" href="${original}">
                 <img class="gallery__image" src="${preview}"
@@ -21,18 +20,6 @@ function createImgCard() {
     .join("");
 }
 
-function galleryCardClick(e) {
-  e.preventDefault();
-}
-sellectGallery.onclick = () => {
-  simpleLightbox
-  .create(
-    `
-  <img src="${event.target.dataset.source}">`
-  )
-  .show();
-};
-
 let lightbox = new simpleLightbox(".gallery a", {
   captions: 'true',
   captionsData: "alt",
@@ -41,4 +28,3 @@ let lightbox = new simpleLightbox(".gallery a", {
   captionPosition: "bottom",
 });
 
-console.log(galleryItems);
